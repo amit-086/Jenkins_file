@@ -10,4 +10,5 @@ stages {
                 echo 'Building the project!';
                 bat 'mvn package'
             }
-        }    
+        }   
+     }
