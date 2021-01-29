@@ -1,14 +1,16 @@
-stages {
-        stage('Git-Checkout') {
-            steps {
-                echo 'checking out from git-repo';
-                git 'https://github.com/amit-086/PipelineScript.git'
-            }
-        }
-        stage('Build') {
-            steps {
-                echo 'Building the project!';
-                bat 'mvn package'
-            }
-        }   
-     }
+pipeline{
+        stages {
+                stage('Git-Checkout') {
+                    steps {
+                        echo 'checking out from git-repo';
+                        git 'https://github.com/amit-086/PipelineScript.git'
+                    }
+                }
+                stage('Build') {
+                    steps {
+                        echo 'Building the project!';
+                        bat 'mvn package'
+                    }
+                }   
+             }
+      }
